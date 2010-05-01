@@ -3,6 +3,8 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Location</th>
+    <th>Excerpt</th>
     <th>Body</th>
     <th>Published at</th>
     <th></th>
@@ -13,6 +15,8 @@
 <% @articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
+    <td><%= article.location %></td>
+    <td><%= article.excerpt %></td>
     <td><%= article.body %></td>
     <td><%= article.published_at %></td>
     <td><%= link_to 'Show', article %></td>
