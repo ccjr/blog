@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do |map|
+  resources :articles
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
