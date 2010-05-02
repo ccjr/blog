@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  name: MyString
+  birthday: 2010-05-02
+  bio: MyText
+  color: MyString
+  twitter: MyString
+
+two:
+  user_id: 1
+  name: MyString
+  birthday: 2010-05-02
+  bio: MyText
+  color: MyString
+  twitter: MyString
