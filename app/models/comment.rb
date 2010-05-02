@@ -1,6 +1,7 @@
 class Comment < ActiveRecord::Base
   belongs_to :article
   
+  validates :name, :email, :body, :presence => true
   validate :article_should_be_published
 
   def article_should_be_published
