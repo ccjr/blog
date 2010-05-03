@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_filter :authenticate, :except => [:index, :show]
+    
   # GET /articles
   # GET /articles.xml
   def index
