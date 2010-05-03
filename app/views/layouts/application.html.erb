@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>Blog</title>
   <%= stylesheet_link_tag :all %>
@@ -7,11 +8,25 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= content_tag :p, notice, :class => 'notice' if notice.present? %>
-<%= content_tag :p, alert, :class => 'alert' if alert.present? %>
-
-<%= yield %>
-
+  <div id="header">
+    <h1><%= link_to "Blog", root_path %></h1>
+    <div id="user_bar">
+      <% if logged_in? %>
+        <%= link_to "New Article", new_article_path %> |
+        <%= link_to "Edit Password", edit_user_path(current_user) %> |
+        <%= link_to "Logout", logout_path %>
+      <% else %>
+        <%= link_to "Login", login_path %>
+      <% end %>
+    </div>
+  </div>
+  <div id="main">
+    <%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
+    <%= content_tag(:p, alert, :class => 'alert') if alert.present? %>
+    <%= yield %>
+  </div>
+  <div id="footer">
+    A simple blog built for the book <a href="http://beginningrails.com">Beginning Rails 3</a>
+  </div>
 </body>
 </html>
