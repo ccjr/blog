@@ -1,10 +1,12 @@
 <%= div_for article do %>
   <h3>
     <%= link_to article.title, article %>
-    <span class='actions'>
-      <%= link_to "Edit", edit_article_path(article) %>
-      <%= link_to "Delete", article, :confirm => "Are you sure?", :method => :delete %>
-    </span>
+    <% if article.owned_by? current_user %>
+      <span class='actions'>
+        <%= link_to "Edit", edit_article_path(article) %>
+        <%= link_to "Delete", article, :confirm => "Are you sure?", :method => :delete %>
+      </span>
+    <% end %>
   </h3>
-  <%= article.body %>
+  <%= raw simple_format(article.body) %>
 <% end %>
