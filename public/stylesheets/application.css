@@ -1,0 +1,223 @@
+* { 
+  margin: 0 auto;
+}
+
+body { 
+  background-color: #fff; 
+  color: #333;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+p {
+  padding: 5px;
+}
+
+a {
+  color:#D95E16;
+  padding:0 2px;
+  text-decoration:none;
+}
+
+a:hover {
+  background-color:#FF813C;
+  color:#FFFFFF;
+}
+
+.notice { color: green; }
+.alert  { color: red; }
+
+#header, #main, #footer {
+  width: 800px;
+}
+
+#header {
+  font-family:"Myriad Web Pro",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
+  border-bottom: 5px solid #333333;
+  color:#333333;
+  padding: 15px 0;
+  height: 35px;
+}
+
+#header #user_bar {
+  float: right;
+  font-size: 10px;
+}
+
+#footer {
+  border-top: 5px solid #C1C1C1;
+  margin-top: 10px;
+  clear:both;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 11px;
+}
+
+#header h1 {
+  padding-top: 14px;
+  float: left;
+  font-size: 30px;
+}
+
+#header h1 a{
+  color: black;
+}
+
+#header h1 a:hover {
+  background-color: white;
+  color: black;
+  border-bottom: 4px solid #ccc;
+}
+
+#header p {
+  float: right;
+}
+
+#main h1 {
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 10px;
+}
+
+#main table{
+  margin: 0;
+}
+
+#main form{
+  text-align: left;
+}
+
+#main form br{
+  display: none;
+  float: left;
+}
+
+#main form label {
+  width: 150px;
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+  float: left;
+  line-height: 21px;
+  vertical-align: center;
+  background-color: #F0F0F0;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+}
+
+#main form label.check_box_label {
+  width: auto;
+  display: inline;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 21px;
+  vertical-align: center;
+  background-color: #FFF;  
+  border: none;
+}
+
+#main form .field, #main form .actions {
+  padding-top: 10px;
+  clear: both;
+}
+
+#main form input[type=text], #main form input[type=password], #main form textarea {
+  float: left;
+  font-size: 14px;
+  width: 250px;
+  padding: 2px;
+  border: 2px solid #ccc;
+}
+
+#main form input[type=checkbox] {
+  margin: 4px;
+  float: left;
+}
+
+#main form textarea {
+  height: 150px;
+}
+
+#main form input[type=submit] {
+  margin-left: 175px;
+  float:left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#main h3 {
+  padding-top: 10px;
+  height: 20px;
+}
+
+#main h3 .actions{
+  display:none;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+#main h3:hover .actions{
+  display: inline;
+}
+
+.fieldWithErrors {
+  display:table;
+  float:left;
+  margin:0;
+  width:100px;
+  margin-right: 10px;
+}
+
+#main form .fieldWithErrors label{
+  border: 2px solid red;
+  margin-right: 0px;
+}
+
+#main form .fieldWithErrors input, #main form .fieldWithErrors  textarea{
+  width: 250px;
+  border: 2px solid red;
+}
+
+#errorExplanation {
+  width: 413px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+  margin: 0;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
