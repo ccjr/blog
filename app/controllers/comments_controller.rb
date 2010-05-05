@@ -5,9 +5,15 @@ class CommentsController < ApplicationController
   def create
     @comment = @article.comments.new(params[:comment])
     if @comment.save
-      redirect_to @article, :notice => 'Thanks for your comment'
+      respond_to do |format|
+        format.html { redirect_to @article, :notice => 'Thanks for your comment' }
+        format.js
+      end
     else
-      redirect_to @article, :alert => 'Unable to add comment'
+      respond_to do |format|
+        format.html { redirect_to @article, :alert => 'Unable to add comment' }
+        format.js { render 'fail_create.js.erb' }
+      end
     end
   end
   
@@ -15,7 +21,10 @@ class CommentsController < ApplicationController
     @article = current_user.articles.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
     @comment.destroy
-    redirect_to @article, :notice => 'Comment deleted'
+    respond_to do |format|
+      format.html { redirect_to @article, :notice => 'Comment deleted' }
+      format.js
+    end
   end
   
   private
