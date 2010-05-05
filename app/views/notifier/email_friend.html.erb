@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>
+  One of your friends, <%= @sender_name %>,
+  thinks you like an article we have written.
+</p>
+
+<p>
+  Come check all the information about <strong><%= @article.title %></strong> at
+  <%= article_url @article, :host => 'blog.example.com' %>
+</p>
+</body>
+</html>
