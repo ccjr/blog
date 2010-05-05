@@ -2,11 +2,11 @@ require 'test_helper'
 
 class NotifierTest < ActionMailer::TestCase
   test "email_friend" do
-    mail = Notifier.email_friend
-    assert_equal "Email friend", mail.subject
-    assert_equal ["to@example.org"], mail.to
-    assert_equal ["from@example.com"], mail.from
-    assert_match "Hi", mail.body.encoded
-  end
-
+    article = articles(:welcome_to_rails)
+    message = Notifier.email_friend(article, 'John Smith', 'dude@example.com')
+    
+    assert_equal "Interesting Article", message.subject
+    assert_equal ["dude@example.com"], message.to
+    assert_equal ["from@example.com"], message.from
+  end  
 end
