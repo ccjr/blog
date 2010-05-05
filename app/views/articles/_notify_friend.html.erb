@@ -1,0 +1,14 @@
+<% form_tag(notify_friend_article_path(@article), :id => 'notify_friend_form', :style => 'display:none') do %>
+  <div class="field">
+    <%= label_tag :name, 'Your name' %><br />
+    <%= text_field_tag :name %>
+  </div>
+  <div class="field">
+    <%= label_tag :email, "Your friend's email" %><br />
+    <%= text_field_tag :email %>
+  </div>
+  <div class="actions">
+    <%= submit_tag 'Send' %> or
+    <%= link_to 'Cancel', '#', :onclick => "$('#notify_friend_form').slideUp()" %>
+  </div>
+<% end %>

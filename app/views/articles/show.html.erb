@@ -1,5 +1,8 @@
 <%= render @article %>
 
+<%= link_to 'Email a friend', '#', :onclick => "$('#notify_friend_form').slideDown()" %>
+<%= render 'notify_friend' %>
+
 <h3>Comments</h3>
 <div id="comments">
   <%= render @article.comments %>
