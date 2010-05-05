@@ -27,7 +27,7 @@ class ArticleTest < ActiveSupport::TestCase
     assert_raise(ActiveRecord::RecordNotFound) { Article.find(article.id) }
   end
 
-  test "should not create an article without title" do
+  test "should not create an article without title nor body" do
     article = Article.new
     assert !article.valid?
     assert article.errors[:title].any?
