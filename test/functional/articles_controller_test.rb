@@ -27,7 +27,12 @@ class ArticlesControllerTest < ActionController::TestCase
 
   test "should show article" do
     get :show, :id => @article.to_param
+
     assert_response :success
+    assert_template 'show'
+
+    assert_not_nil assigns(:article)
+    assert assigns(:article).valid?
   end
 
   test "should get edit" do
