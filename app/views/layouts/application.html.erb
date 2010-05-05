@@ -9,14 +9,14 @@
 </head>
 <body>
   <div id="header">
-    <h1><%= link_to "Blog", root_path %></h1>
+    <h1><%= link_to t('general.title'), root_path %></h1>
     <div id="user_bar">
       <% if logged_in? %>
-        <%= link_to "New Article", new_article_path %> |
-        <%= link_to "Edit Password", edit_user_path(current_user) %> |
-        <%= link_to "Logout", logout_path %>
+        <%= link_to t('articles.new_article'), new_article_path %> |
+        <%= link_to t('users.edit_password'), edit_user_path(current_user) %> |
+        <%= link_to t('sessions.logout'), logout_path %>
       <% else %>
-        <%= link_to "Login", login_path %>
+        <%= link_to t('sessions.login'), login_path %>
       <% end %>
     </div>
   </div>
@@ -26,7 +26,7 @@
     <%= yield %>
   </div>
   <div id="footer">
-    A simple blog built for the book <a href="http://beginningrails.com">Beginning Rails 3</a>
+    <%= t('general.footer') %> <a href="http://beginningrails.com">Beginning Rails 3</a>
   </div>
 </body>
 </html>
