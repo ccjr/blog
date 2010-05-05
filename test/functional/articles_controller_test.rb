@@ -13,6 +13,7 @@ class ArticlesControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
+    login_as(:eugene)
     get :new
     assert_response :success
   end
