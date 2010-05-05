@@ -1,11 +1,11 @@
 <%= render @article %>
 
-<%= link_to 'Email a friend', '#', :onclick => "$('#notify_friend_form').slideDown()" %>
+<%= link_to t('general.email_a_friend'), '#', :onclick => "$('#notify_friend_form').slideDown()" %>
 <%= render 'notify_friend' %>
 
-<h3>Comments</h3>
+<h3><%= t('comments.comments') %></h3>
 <div id="comments">
   <%= render @article.comments %>
 </div>
 
-<%= link_to "new comment", new_article_comment_path(@article, :format => :js), :remote => true, :id => 'new_comment_link' %>
+<%= link_to t('comments.new_comment'), new_article_comment_path(@article, :format => :js), :remote => true, :id => 'new_comment_link' %>
