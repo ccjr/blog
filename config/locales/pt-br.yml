@@ -1,6 +1,54 @@
-pt-br:
-  hello: "Ola mundo"
-  
+pt-br: 
+  general: 
+    are_you_sure: Tem certeza?
+    back: Volta
+    cancel: Cancelar
+    create: Criar
+    delete: Apagar
+    edit: Editar
+    editing: Editando
+    footer: Um blog simples desenvolvido para o livro
+    email_a_friend: Avisar um amigo
+    search: Pesquisar
+    send_email: Mandar email
+    show: Mostrar
+    title: Blog
+    update: Atualizar
+    your_name: Seu nome
+    your_friend_email: O email do seu amigo
+    or: ou
+  application:
+    access_denied: "Por favor, efetue o login para continuar"
+  articles:
+    editing_article: Editando Artigo
+    listing_articles: Listando Artigos
+    new_article: Novo Artigo
+    article: artigo
+    create_success: Artigo foi criado com sucesso.
+    update_success: Artigo foi atualizado com sucesso.
+    articles: artigos
+    notify_friend_success: Seu amigo foi avisado a respeito desse artigo
+  users:
+    new_user: New user
+    edit_password: Edit Password
+    editing_user: Editing user
+    create_success: User successfully added.
+    update_success: Updated user information successfully.
+  sessions:
+    login: Logar
+    logout: Desconectar
+    invalid_login: Senha ou Email invalidos
+    logout_success: Voce desconectou do sistem com sucesso
+  comments:
+    comments: Comentarios
+    new_comment: Novo Comentario
+    create_success: Obrigado pelo comentario
+    create_failure: Nao foi possivel adicionar o comentario
+    destroy_success: Comentario deletado
+    add: Adicionar
+    errors: 
+      not_published_yet: ainda nao foi publicado
+    
   activerecord:
     errors:
       models:
