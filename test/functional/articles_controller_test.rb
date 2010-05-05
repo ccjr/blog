@@ -40,12 +40,14 @@ class ArticlesControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
+    login_as(:eugene)
     get :edit, :id => @article.to_param
     assert_response :success
   end
 
   test "should update article" do
-    put :update, :id => @article.to_param, :article => @article.attributes
+    login_as(:eugene)
+    put :update, :id => @article.to_param, :article => { :title => 'New Title' }
     assert_redirected_to article_path(assigns(:article))
   end
 
