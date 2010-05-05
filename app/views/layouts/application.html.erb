@@ -10,6 +10,7 @@
 <body>
   <div id="header">
     <h1><%= link_to t('general.title'), root_path %></h1>
+    <%= language_selector %>
     <div id="user_bar">
       <% if logged_in? %>
         <%= link_to t('articles.new_article'), new_article_path %> |

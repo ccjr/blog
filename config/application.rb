@@ -14,7 +14,5 @@ module Blog
     config.encoding = "utf-8"
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    # Setting the locale
-    config.i18n.default_locale = 'pt-br'
   end
 end

@@ -29,11 +29,11 @@ pt-br:
     articles: artigos
     notify_friend_success: Seu amigo foi avisado a respeito desse artigo
   users:
-    new_user: New user
-    edit_password: Edit Password
-    editing_user: Editing user
-    create_success: User successfully added.
-    update_success: Updated user information successfully.
+    new_user: Novo Usuario
+    edit_password: Editar senha
+    editing_user: Editando usuario
+    create_success: Usuario editado com sucesso.
+    update_success: Usuario atualizado com sucesso.
   sessions:
     login: Logar
     logout: Desconectar

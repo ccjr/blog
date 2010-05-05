@@ -1,8 +1,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   layout 'application'
+  before_filter :set_locale
 
-  protected 
+  protected
+    # Set the locale from parameters
+    def set_locale
+      I18n.locale = params[:locale] unless params[:locale].blank?
+    end
+
     # Returns the currently logged in user or nil if there isn't one
     def current_user
       return unless session[:user_id]
