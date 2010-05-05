@@ -1,4 +1,4 @@
-<% form_tag(notify_friend_article_path(@article), :id => 'notify_friend_form', :style => 'display:none') do %>
+<%= form_tag(notify_friend_article_path(@article), :id => 'notify_friend_form', :style => 'display:none') do %>
   <div class="field">
     <%= label_tag :name, 'Your name' %><br />
     <%= text_field_tag :name %>
