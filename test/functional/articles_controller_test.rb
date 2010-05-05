@@ -2,12 +2,13 @@ require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
   setup do
-    @article = articles(:one)
+    @article = articles(:welcome_to_rails)
   end
 
   test "should get index" do
     get :index
     assert_response :success
+    assert_template 'index'
     assert_not_nil assigns(:articles)
   end
 
