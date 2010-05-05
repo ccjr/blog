@@ -1,15 +1,15 @@
-<h1>Login</h1>
+<h1><%= t('sessions.login') %></h1>
 
 <%= form_tag session_path do %>
   <div class="field">
-    <%= label_tag :email %><br />
+    <%= label_tag :email, t('sessions.email') %><br />
     <%= text_field_tag :email %>
   </div>
   <div class="field">
-    <%= label_tag :password %><br />
+    <%= label_tag :password, t('sessions.password') %><br />
     <%= password_field_tag :password %>
   </div>
   <div class="actions">
-    <%= submit_tag 'Login' %>
+    <%= submit_tag t('sessions.login') %>
   </div>
 <% end %>

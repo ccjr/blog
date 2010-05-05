@@ -35,11 +35,17 @@ en:
     create_success: User successfully added.
     update_success: Updated user information successfully.
   sessions:
+    email: Email
+    password: Password    
     login: Login
     logout: Logout
+    successful_login: Logged in successfully
     invalid_login: Invalid login/password combination
     logout_success: You successfully logged out
   comments:
+    name: Name
+    email: Email
+    body: Body
     comments: Comments
     new_comment: New comment
     create_success: Thanks for your comment

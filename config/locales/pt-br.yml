@@ -35,11 +35,17 @@ pt-br:
     create_success: Usuario editado com sucesso.
     update_success: Usuario atualizado com sucesso.
   sessions:
+    email: Email
+    password: Senha
     login: Logar
     logout: Desconectar
+    successful_login: Logado com sucesso
     invalid_login: Senha ou Email invalidos
     logout_success: Voce desconectou do sistem com sucesso
   comments:
+    name: Nome
+    email: Email
+    body: Conteudo
     comments: Comentarios
     new_comment: Novo Comentario
     create_success: Obrigado pelo comentario

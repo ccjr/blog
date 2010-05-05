@@ -1,17 +1,17 @@
 <%= form_for([@article, @article.comments.new], :remote => true, :html => {:style => 'display: none;'}) do |f| %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, t('comments.name') %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, t('comments.email') %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
+    <%= f.label :body, t('comments.body') %><br />
     <%= f.text_area :body %>
   </div>
   <div class="actions">
-    <%= f.submit 'Add' %>
+    <%= f.submit t('comments.add') %>
   </div>
 <% end %>
