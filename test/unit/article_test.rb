@@ -26,4 +26,14 @@ class ArticleTest < ActiveSupport::TestCase
     article.destroy
     assert_raise(ActiveRecord::RecordNotFound) { Article.find(article.id) }
   end
+
+  test "should not create an article without title" do
+    article = Article.new
+    assert !article.valid?
+    assert article.errors[:title].any?
+    assert article.errors[:body].any?
+    assert_equal ["can't be blank"], article.errors[:title]
+    assert_equal ["can't be blank"], article.errors[:body]
+    assert !article.save
+  end
 end
