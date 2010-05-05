@@ -19,13 +19,16 @@ class ArticlesControllerTest < ActionController::TestCase
   end
 
   test "should create article" do
+    login_as(:eugene)
     assert_difference('Article.count') do
-      post :create, :article => @article.attributes
+      post :create, :article => { :title => 'Post title',
+                                  :body  => 'Lorem ipsum..' }
     end
 
+    assert_response :redirect
     assert_redirected_to article_path(assigns(:article))
   end
-
+  
   test "should show article" do
     get :show, :id => @article.to_param
 
