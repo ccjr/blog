@@ -8,5 +8,8 @@
       </span>
     <% end %>
   </h3>
+  <% if article.tag_list.present? %>
+    <small>Tags: <%= article.tag_list %></small>
+  <% end %>
   <%= simple_format raw(article.body) %>
 <% end %>
