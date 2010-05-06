@@ -20,6 +20,7 @@
         <%= link_to t('sessions.login'), login_path %>
       <% end %>
     </div>
+    <%= render 'articles/search' %>
   </div>
   <div id="main">
     <%= content_tag(:p, notice, :class => 'notice') if notice.present? %>

@@ -4,6 +4,9 @@ Blog::Application.routes.draw do |map|
     member do
       post :notify_friend
     end
+    collection do
+      get :search
+    end
     resources :comments
   end
   resources :users
