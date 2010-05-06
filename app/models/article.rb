@@ -7,6 +7,7 @@ class Article < ActiveRecord::Base
   has_many :comments
   
   acts_as_taggable
+  simple_search :title, :body
  
   scope :published, where("articles.published_at IS NOT NULL")
   scope :draft, where("articles.published_at IS NULL")
